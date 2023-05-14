@@ -1,0 +1,667 @@
+﻿/********** Template CSS **********/
+:root {
+    --primary: #13C5DD;
+    --secondary: #354F8E;
+    --light: #EFF5F9;
+    --dark: #1D2A4D;
+}
+
+.btn {
+    font-weight: 700;
+    transition: .5s;
+}
+
+.btn:hover {
+    -webkit-box-shadow: 0 8px 6px -6px #555555;
+    -moz-box-shadow: 0 8px 6px -6px #555555;
+    box-shadow: 0 8px 6px -6px #555555;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    z-index: 99;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Jost', sans-serif;
+    position: relative;
+    margin-left: 30px;
+    padding: 30px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    outline: none;
+    transition: .5s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (min-width: 992px) {
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 5px;
+        bottom: 0;
+        left: 50%;
+        background: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::before,
+    .navbar-light .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+.hero-header {
+    background: url(../img/hero.jpg) top right no-repeat;
+    background-size: cover;
+}
+
+.service-item {
+    position: relative;
+    height: 350px;
+    padding: 0 30px;
+    transition: .5s;
+}
+
+.service-item .service-icon {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 50%;
+    transform: rotate(-14deg);
+}
+
+.service-item .service-icon i {
+    transform: rotate(15deg);
+}
+
+.service-item a.btn {
+    position: absolute;
+    width: 60px;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+}
+
+.service-item:hover a.btn {
+    bottom: -24px;
+    opacity: 1;
+}
+
+.price-carousel::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background: var(--primary);
+    border-radius: 8px 8px 50% 50%;
+    z-index: -1;
+}
+
+.price-carousel .owl-nav {
+    margin-top: 35px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.price-carousel .owl-nav .owl-prev,
+.price-carousel .owl-nav .owl-next{
+    position: relative;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: #FFFFFF;
+    font-size: 22px;
+    border-radius: 45px;
+    transition: .5s;
+}
+
+.price-carousel .owl-nav .owl-prev:hover,
+.price-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+@media (min-width: 576px) {
+    .team-item .row {
+        height: 350px;
+    }
+}
+
+.team-carousel .owl-nav {
+    position: absolute;
+    padding: 0 45px;
+    width: 100%;
+    height: 45px;
+    top: calc(50% - 22.5px);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-carousel .owl-nav .owl-prev,
+.team-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.team-carousel .owl-nav .owl-prev:hover,
+.team-carousel .owl-nav .owl-next:hover {
+    background: var(--dark);
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    background: var(--light);
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+}
+
+.testimonial-carousel .owl-item img {
+    width: 150px;
+    height: 150px;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+    section .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
+    section .trees {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 100;
+        pointer-events: none;
+    }
+
+    section .girl {
+        position: absolute;
+        scale: 0.65;
+        pointer-events: none;
+        animation: animateGirl 15s linear infinite;
+    }
+
+@keyframes animateGirl {
+    0% {
+        transform: translateX(calc(100% + 100vw));
+    }
+
+    50% {
+        transform: translateX(calc(-100% - 100vw));
+    }
+
+    50.01% {
+        transform: translateX(calc(-100% - 100vw)) rotateY(180deg);
+    }
+
+    100% {
+        transform: translateX(calc(100% + 100vw)) rotateY(180deg);
+    }
+}
+
+.login {
+    position: relative;
+    padding: 60px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid#fff;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+    .login h2 {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 600;
+        color: #8f2c24;
+        margin-bottom: 10px;
+    }
+
+    .login .inputBox {
+        position: relative;
+    }
+
+        .login .inputBox input {
+            position: relative;
+            width: 100%;
+            padding: 15px 20px;
+            outline: none;
+            font-size: 1.25em;
+            color: #8f2c24;
+            border-radius: 5px;
+            background: #fff;
+            border: none;
+            margin-bottom: 30px;
+        }
+
+            .login .inputBox input ::placeholder {
+                color: #8f2c24;
+            }
+
+        .login .inputBox #btn {
+            position: relative;
+            border: none;
+            outline: none;
+            background: #8f2c24;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.25em;
+            font-weight: 500;
+            transition: 0.5s;
+        }
+
+            .login .inputBox #btn:hover {
+                background: #d64c42;
+            }
+
+    .login .group {
+        display: flex;
+        justify-content: space-between
+    }
+
+        .login .group a {
+            font-size: 1.25em;
+            color: #8f2c24;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+            .login .group a:nth-child(2) {
+                text-decoration: underline;
+            }
+
+.leaves {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+    .leaves .set {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+        .leaves .set div {
+            position: absolute;
+            display: block;
+        }
+
+            .leaves .set div:nth-child(1) {
+                left: 20%;
+                animation: animate 20s linear infinite;
+            }
+
+            .leaves .set div:nth-child(2) {
+                left: 50%;
+                animation: animate 14s linear infinite;
+            }
+
+            .leaves .set div:nth-child(3) {
+                left: 70%;
+                animation: animate 12s linear infinite;
+            }
+
+            .leaves .set div:nth-child(4) {
+                left: 5%;
+                animation: animate 15s linear infinite;
+            }
+
+            .leaves .set div:nth-child(5) {
+                left: 85%;
+                animation: animate 18s linear infinite;
+            }
+
+            .leaves .set div:nth-child(6) {
+                left: 90%;
+                animation: animate 12s linear infinite;
+            }
+
+            .leaves .set div:nth-child(7) {
+                left: 15%;
+                animation: animate 14s linear infinite;
+            }
+
+            .leaves .set div:nth-child(8) {
+                left: 60%;
+                animation: animate 15s linear infinite;
+            }
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+
+    40% {
+        transform: translateX(-20px) rotate(90deg);
+    }
+
+    60% {
+        transform: translateX(20px) rotate(180deg);
+    }
+
+    80% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+
+    100% {
+        top: 110%;
+        transform: translateX(20px) rotate(225deg);
+    }
+}
+
+.div-nut {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px !important;
+    position: fixed;
+    z-index: 2147483647;
+    bottom: 24px;
+    left: 0;
+    padding-left: 5px;
+}
+
+.div-nut > a {
+    display: inline-block;
+    overflow: visible !important;
+    width: 54px !important;
+    height: 54px !important;
+    margin: 6px !important;
+    background-size: 100% !important;
+    border: 2px solid #fff !important;
+    border-radius: 50% !important;
+    margin: 8px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.div-nut .nut-action:hover .tooltext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.div-nut:hover .nut-action {
+    text-decoration: none !important;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 4px 15px rgba(0, 0, 0, 0.13);
+}
+
+.div-nut .tooltext {
+    visibility: hidden;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    top: calc(50% - 16px);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+    left: 120%;
+    background-image: linear-gradient(180deg, #e57373 0%, #c62828 100%);
+    color: #fff;
+}
+
+.div-nut .nut-goi {
+    background-image: url("https://thietkewebchuyen.com/data/icon/wordpress/call.svg");
+}
+
+.div-nut .nut-zalo {
+    background-image: url("https://thietkewebchuyen.com/data/icon/wordpress/zalo.svg");
+}
+
+.div-nut .nut-face {
+    background-image: url("https://thietkewebchuyen.com/data/icon/wordpress/messenger.svg");
+}
+
+.nut-goi.nut-action:before {
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%,-50%) scale(0);
+    -moz-transform: translate(-50%,-50%) scale(0);
+    -ms-transform: translate(-50%,-50%) scale(0);
+    -o-transform: translate(-50%,-50%) scale(0);
+    border: 5px solid #feaf88;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: block;
+    -webkit-animation: spread-fade 1s ease-in infinite;
+    animation: spread-fade 1s ease-in infinite;
+}
+
+.nut-goi.nut-action:after {
+    display: block;
+    -webkit-animation: spread-fade 1s .2s ease-in infinite;
+    animation: spread-fade 1s .2s ease-in infinite;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%,-50%) scale(0);
+    -moz-transform: translate(-50%,-50%) scale(0);
+    -ms-transform: translate(-50%,-50%) scale(0);
+    -o-transform: translate(-50%,-50%) scale(0);
+    border: 5px solid #feaf88;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+/* Nút Để Mở Chatbox */
+.nut-mo-chatbox {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* Ẩn chatbox mặc định */
+.Chatbox {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Thêm style cho form */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+    /* thiết lập style textarea */
+    .form-container textarea {
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        resize: none;
+        min-height: 100px;
+    }
+
+        /*thiết lập style cho textarea khi được focus */
+        .form-container textarea:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+    /* Sthiết lập style cho nút trong form*/
+    .form-container .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        opacity: 0.8;
+    }
+
+    /* Thiết lập màu nền cho nút đóng chatbox */
+    .form-container .nut-dong-chatbox {
+        background-color: red;
+    }
+
+    /* Thêm hiệu ứng hover cho nút*/
+    .form-container .btn:hover, .nut-mo-chatbox:hover {
+        opacity: 1;
+    }

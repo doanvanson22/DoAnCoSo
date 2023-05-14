@@ -1,0 +1,37 @@
+﻿@using Booking_Dental_Clinic.Models
+@model List<Giohang>
+@{
+    ViewBag.Title = "Giohang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Giohang</h2>
+<table>
+    <tr>
+        <td>Mã dịch vụ</td>
+
+        <td>Tên dịch vụ</td>
+
+        <td>Đơn giá</td>
+
+        <td>Số lượng</td>
+
+        <td>Thành tiền</td>
+    </tr>
+</table>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.idMaDV</td>
+
+        <td>@item.sTenSanPham</td>
+
+        <td>@String.Format("{0:0,0", item.sDongia.ToString()) VNĐ </td>
+
+        <td>@item.sSoluong</td>
+
+        <td>@String.Format("{0:0,0", item.ThanhTien.ToString()) VNĐ</td>
+    </tr>
+
+}
